@@ -1,0 +1,32 @@
+#!/usr/bin/env sh
+set -e
+
+BLUE='\033[34m'
+GREEN='\033[32m'
+BOLD='\033[1m'
+RESET='\033[39m'
+
+
+printf "\n${BLUE}----------------------${RESET}\n"
+printf "${BLUE}Step 1: npm run format${RESET}\n"
+printf "${BLUE}----------------------${RESET}\n"
+
+npm run format
+
+printf "${GREEN}?${RESET} Formatter check passed 100%%\n"
+
+printf "\n${BLUE}--------------------${RESET}\n"
+printf "${BLUE}Step 2: npm run lint${RESET}\n"
+printf "${BLUE}--------------------${RESET}\n"
+
+npm run lint
+
+printf "${GREEN}?${RESET} Biome lint check passed 100%%\n"
+
+printf "\n${BOLD}  ____                              _  ${RESET}\n"
+printf "${BOLD} / ___| _   _  ___ ___ ___  ___ ___| | ${RESET}\n"
+printf "${BOLD} \\___ \\| | | |/ __/ __/ _ \\/ __/ __| | ${RESET}\n"
+printf "${BOLD}  ___) | |_| | (_| (_|  __/\\__ \\__ \\_| ${RESET}\n"
+printf "${BOLD} |____/ \\__,_|\\___\\___\\___||___/___(_) ${RESET}\n\n"
+
+printf "${GREEN}? Changes have been commited successfully!${RESET}\n\n"
